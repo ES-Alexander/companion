@@ -27,4 +27,10 @@ To make this installation work **the [terminal over browser](https://www.ardusub
     chmod +x install.sh
     ./install.sh
     ```
-11. Reboot to complete (e.g. `sudo reboot`)
+11. As you are now compiling pymavlink with Python3 instead of Python2, you will get an error during installation. A quick workaround is to change the following line in `$HOME/companion/submodules/mavlink/pymavlink/generator/mavcrc.py`:
+```
+CHANGE LINE 29: bytes.fromstring(buf)
+TO: bytes.frombytes(buf.encode())
+```
+More details can be found [here](https://docs.python.org/3/library/array.html#array.array.frombytes).  
+13. Reboot to complete (e.g. `sudo reboot`)
