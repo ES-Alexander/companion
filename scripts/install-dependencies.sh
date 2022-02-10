@@ -14,11 +14,10 @@ run_step sudo apt upgrade $APT_OPTIONS
 
 # install python and pip
 run_step sudo apt install $APT_OPTIONS \
-  python-dev \
-  python-pip \
+  python3-dev \
   python3-pip \
-  python-libxml2 \
-  python-lxml \
+  python3-libxml2 \
+  python3-lxml \
   libcurl4-openssl-dev \
   libxml2-dev \
   libxslt1-dev \
@@ -74,8 +73,8 @@ run_step python3 setup.py build
 run_step sudo python3 setup.py install
 
 run_step cd $COMPANION_DIR/submodules/MAVProxy
-run_step python setup.py build
-run_step sudo python setup.py install
+run_step python3 setup.py build
+run_step sudo python3 setup.py install
 
 run_step cd $COMPANION_DIR/br-webui
 run_step export JOBS=4
