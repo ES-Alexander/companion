@@ -1,8 +1,15 @@
-# companion
+# IMPORTANT
+
+The `setup-clean2` branch was a temporary prop for running Companion on more recent Raspberry Pis while official support for those devices was unavailable. 
+
+Companion development has now stopped completely. **All new projects/setups should use [BlueOS](https://discuss.bluerobotics.com/t/blueos-1-0-beta-testing/10830)**, which has been available for beta testing since October 2021, and is now in stable releases :-)
+
+# Original Notes
+## companion
 
 This repository is the Blue Robotics version of the [ArduPilot/companion](https://github.com/ArduPilot/companion) repository. This is the code that runs on the Raspberry Pi in the BlueROV2. Currently, this repository only provides an implementation for the Raspberry Pi Computer.
 
-# Compatibility + Caveats
+## Compatibility + Caveats
 
 This branch **unofficially** enables installing the companion software onto an RPi3B+ or RPi4 device. It uses the updates from https://github.com/bluerobotics/companion/pull/284, but has been rebased onto version 0.0.29 of companion.
 
@@ -10,7 +17,7 @@ The main companion software is currently undergoing a major rewrite, part of whi
 
 To make this installation work **the [terminal over browser](https://www.ardusub.com/reference/companion/terminal-over-browser.html) and [git](https://www.ardusub.com/reference/companion/git.html) pages from the web interface were REMOVED.** Consequentially, direct control of the Raspberry Pi must be done using SSH or a keyboard+monitor, and transferring to e.g. the `dvl` branch is not a simple process.
 
-# Installation
+## Installation
 
 1. Connect a microSD card to your computer (at least 4GB)
 2. Use [Raspberry Pi imager](https://www.raspberrypi.org/software/) to flash Raspberry Pi OS Lite onto the SD card
